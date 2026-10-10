@@ -4,158 +4,135 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nishkarsha Dawadi · Geotechnical Earthquake Engineering</title>
-<meta name="description" content="Nishkarsha Dawadi, Ph.D. candidate in geotechnical earthquake engineering at Utah State University. Research on multi-dimensional seismic site response and geophysical site characterization.">
+<meta name="description" content="Nishkarsha Dawadi, Ph.D. candidate in geotechnical earthquake engineering at Utah State University.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="has-hero">
 <header class="site-header">
-  <a class="brand" href="#about">Nishkarsha Dawadi</a>
-  <nav>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#experience">Experience</a>
-    <a href="#cv">CV</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html"><span class="mark">ND</span>Nishkarsha Dawadi</a>
+    <input type="checkbox" id="menu-toggle" aria-label="Menu">
+    <label for="menu-toggle" class="menu-btn" aria-hidden="true"><span></span></label>
+    <nav><a href="index.html" class="active">Home</a><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="experience.html">Experience</a><a href="personal.html">Personal</a><a href="Nishkarsha_Dawadi_CV.pdf">CV</a></nav>
+  </div>
 </header>
 
-<main>
-  <section id="about" class="hero">
-    <!-- Replace with <img class="photo" src="photo.jpg" alt="Nishkarsha Dawadi"> once you add a photo -->
-    <div class="photo" aria-hidden="true">ND</div>
+<section class="hero" style="background-image:url('images/hero-shaker.jpg')">
+  <div class="hero-shade"></div>
+  <div class="wrap hero-inner">
+    <p class="eyebrow">Geotechnical Earthquake Engineering</p>
+    <h1>Nishkarsha Dawadi</h1>
+    <p class="hero-sub">Ph.D. Candidate at Utah State University, studying how earthquake waves travel through the ground and how local site conditions shape the shaking that reaches our infrastructure.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="research.html">Explore my research</a>
+      <a class="btn btn-ghost" href="Nishkarsha_Dawadi_CV.pdf">Download CV</a>
+    </div>
+  </div>
+  <p class="hero-credit">In the field with a large mobile shaker</p>
+</section>
+
+<section class="section">
+  <div class="wrap intro">
+    <div class="portrait">
+      <img src="images/portrait.jpg" alt="Nishkarsha Dawadi">
+    </div>
     <div>
-      <h1>Nishkarsha Dawadi</h1>
-      <p class="role">Ph.D. Candidate · Civil and Environmental Engineering (Geotechnical) · Utah State University</p>
-      <p>I work in <strong>geotechnical earthquake engineering</strong>, studying how earthquake waves travel through soil and rock and how local site conditions shape the shaking that reaches infrastructure.
-         My dissertation, advised by Dr. Brady R. Cox, develops and calibrates large-scale <strong>2D and 3D site response models</strong> at downhole array sites, combining numerical modeling (FLAC3D, Seismo-VLAB) with field measurements from surface-wave methods, HVSR, and distributed acoustic sensing.</p>
-      <p>Before Utah State, I earned my M.S. in Geotechnical Engineering (with distinction) and B.S. in Civil Engineering from Tribhuvan University in Nepal, and worked on post-earthquake reconstruction after the 2015 Gorkha earthquake.</p>
-      <p class="links">
-        <a href="mailto:nishkarsha.dawadi@usu.edu">Email</a> ·
-        <a href="https://scholar.google.com/citations?user=vI1wl_IAAAAJ&amp;hl=en">Google Scholar</a> ·
-        <a href="https://www.linkedin.com/in/ndawadi/">LinkedIn</a> ·
-        <a href="Nishkarsha_Dawadi_CV.pdf">CV (PDF)</a>
-      </p>
+      <h2 class="section-title">About me</h2>
+      <p class="lead">I develop and calibrate large-scale <strong>2D and 3D seismic site response models</strong> at instrumented downhole array sites, combining numerical modeling with field measurements to understand when one-dimensional assumptions break down.</p>
+      <p>My dissertation, <em>Multi-Dimensional Site Response Analysis at Downhole Array Sites</em>, is advised by Dr. Brady R. Cox. Alongside modeling in FLAC3D and Seismo-VLAB, I spend a lot of time in the field: deep shear-wave velocity profiling with MASW and MAM surface-wave methods, spatially distributed HVSR, and distributed acoustic sensing (DAS). I have contributed to NQA-1-compliant site characterization at three nuclear power sites.</p>
+      <p>Before Utah State, I earned my M.S. in Geotechnical Engineering (with distinction) and B.S. in Civil Engineering from Tribhuvan University in Nepal, and inspected post-earthquake reconstruction after the 2015 Gorkha earthquake.</p>
+      <div class="chips">
+        <span>Seismic site response</span><span>Wave propagation</span><span>Computational geomechanics</span><span>Site characterization</span><span>Geostatistics</span><span>Infrastructure resilience</span>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="news">
-    <h2>News</h2>
-    <ul class="news">
-      <li><span>2026</span><div>Two papers accepted at the 21st International Conference on Soil Mechanics and Geotechnical Engineering (ICSMGE), Vienna.</div></li>
-      <li><span>2026</span><div>Paper on incident wave inclination and azimuth published in <em>Soil Dynamics and Earthquake Engineering</em>.</div></li>
-      <li><span>2026</span><div>Paper on numerical damping formulations published in <em>Earthquake Spectra</em>.</div></li>
-      <li><span>2026</span><div>Presented 3D ground response analyses at the I-15 downhole array at Geo-Congress 2026, Salt Lake City.</div></li>
-      <li><span>2026</span><div>Received the USU Graduate Enhancement Scholarship and Graduate Student Travel Award.</div></li>
-    </ul>
-  </section>
+<section class="section tinted">
+  <div class="wrap">
+    <div class="section-head"><h2 class="section-title">Research at a glance</h2><a class="more" href="research.html">All research →</a></div>
+    <div class="card-grid">
+      <a class="card" href="research.html#multi-d">
+        <img class="fig" src="images/four-arrays-3d.jpg" alt="3D velocity models at four downhole array sites">
+        <div class="card-body"><h3>Multi-dimensional site response</h3><p>2D and 3D models at downhole arrays in Alaska, Utah and California.</p></div>
+      </a>
+      <a class="card" href="research.html#damping">
+        <img class="fig" src="images/damping-misfit.jpg" alt="Rayleigh damping curves">
+        <div class="card-body"><h3>Numerical damping</h3><p>Which damping formulations reproduce recorded small-strain site response.</p></div>
+      </a>
+      <a class="card" href="research.html#field">
+        <img src="images/field-geophones.jpg" alt="Setting up a geophone array for surface-wave testing">
+        <div class="card-body"><h3>Geophysical site characterization</h3><p>Deep Vs profiling, HVSR, and 2 km of distributed acoustic sensing.</p></div>
+      </a>
+    </div>
+  </div>
+</section>
 
-  <section id="research">
-    <h2>Research</h2>
-    <p class="interests">Interests: geotechnical earthquake engineering · seismic site response · infrastructure resilience · computational geomechanics · multi-dimensional wave propagation · geophysical site characterization · spatial variability and geostatistics</p>
-    <div class="cards">
-      <article>
-        <h3>Multi-dimensional site response</h3>
-        <p>Large-scale 2D and 3D nonlinear site response models at downhole array sites such as Delaney Park (Anchorage) and the I-15 array (Salt Lake City), and how incident-wave inclination and azimuth change predicted ground motions.</p>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><h2 class="section-title">Highlights</h2><a class="more" href="publications.html">All publications →</a></div>
+    <div class="highlights">
+      <article class="hl">
+        <img class="fig" src="images/inclined-wave.jpg" alt="Inclined wavefront in a 2D site model">
+        <div><span class="tag">Journal · 2026</span>
+        <h3>Incident wave inclination and azimuth</h3>
+        <p>Our paper in <em>Soil Dynamics and Earthquake Engineering</em> shows how inclined and azimuthally varying waves change multi-dimensional ground response at the Delaney Park downhole array.</p>
+        <a class="pill" href="https://doi.org/10.1016/j.soildyn.2026.110630">Read the paper ↗</a></div>
       </article>
-      <article>
-        <h3>Numerical damping</h3>
-        <p>Calibrating numerical damping formulations against recorded ground motions to find which models best reproduce small-strain site response.</p>
+      <article class="hl">
+        <img class="fig" src="images/damping-misfit.jpg" alt="Damping model comparison">
+        <div><span class="tag">Journal · 2026</span>
+        <h3>Insights on numerical damping</h3>
+        <p>Published in <em>Earthquake Spectra</em>: what calibrating 2D ground response analyses at downhole arrays teaches us about numerical damping formulations.</p>
+        <a class="pill" href="https://doi.org/10.1002/esp4.70087">Read the paper ↗</a></div>
       </article>
-      <article>
-        <h3>3D subsurface models</h3>
-        <p>Building large-scale 3D shear-wave velocity models from spatially distributed HVSR measurements and geostatistical kriging.</p>
+      <article class="hl">
+        <img class="fig" src="images/i15-3d-vs.jpg" alt="3D shear-wave velocity model at the I-15 array">
+        <div><span class="tag">Conference · 2026</span>
+        <h3>3D ground response at the I-15 array</h3>
+        <p>Presented at Geo-Congress 2026 in Salt Lake City: three-dimensional analyses built on a kriged HVSR-based velocity model.</p>
+        <a class="pill" href="https://doi.org/10.1061/9780784486702.049">Read the paper ↗</a></div>
       </article>
-      <article>
-        <h3>Geophysical site characterization</h3>
-        <p>Deep shear-wave velocity profiling (up to ~1 km) with MASW and MAM surface-wave methods, including NQA-1-compliant work at three nuclear power sites, and a ~2 km distributed acoustic sensing experiment in Newberry, Florida.</p>
+      <article class="hl">
+        <img class="fig" src="images/delaney-hvsr.jpg" alt="Delaney Park model">
+        <div><span class="tag">Conference · 2026</span>
+        <h3>Two papers at ICSMGE 2026, Vienna</h3>
+        <p>A comparative assessment of small-strain damping models, and a pseudo-3D Vs and damping model from surface-wave testing.</p>
+        <a class="pill" href="https://doi.org/10.53243/ICSMGE2026-827">Paper 1 ↗</a> <a class="pill" href="https://doi.org/10.53243/ICSMGE2026-1691">Paper 2 ↗</a></div>
       </article>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="publications">
-    <h2>Publications</h2>
+<section class="section tinted">
+  <div class="wrap">
+    <div class="section-head"><h2 class="section-title">Beyond research</h2><a class="more" href="personal.html">More about me →</a></div>
+    <p class="life-text">Outside work you'll find me on a trail in Utah's national parks or watching AC Milan play.</p>
+    <div class="life-grid">
+      <figure><img src="images/p-glacier-milan.jpg" alt="Nishkarsha in a Maldini jersey at Glacier National Park"><figcaption>Glacier National Park</figcaption></figure>
+      <figure><img src="images/p-delicate-arch.jpg" alt="Nishkarsha at Delicate Arch"><figcaption>Delicate Arch, Utah</figcaption></figure>
+      <figure><img src="images/p-canyon.jpg" alt="Nishkarsha on a canyon overlook"><figcaption>Canyon overlook</figcaption></figure>
+      <figure><a href="personal.html" class="life-more"><span>See more photos →</span></a></figure>
+    </div>
+  </div>
+</section>
 
-    <h3 class="pub-group">Journal articles</h3>
-    <ol class="pubs" reversed>
-      <li><strong>Dawadi, N.</strong>, Cox, B. R. (2026). “Effects of varying incident wave inclination and azimuthal angles on multi-dimensional ground response analyses at the Delaney Park downhole array site.” <em>Soil Dynamics and Earthquake Engineering</em>.
-        <span class="pub-links"><a href="https://doi.org/10.1016/j.soildyn.2026.110630">DOI</a></span></li>
-      <li><strong>Dawadi, N.</strong>, Mohammadi, K., Hallal, M. M., Cox, B. R. (2026). “Insights on numerical damping formulations gained from calibrating 2D ground response analyses at downhole array sites.” <em>Earthquake Spectra</em>.
-        <span class="pub-links"><a href="https://doi.org/10.1002/esp4.70087">DOI</a></span></li>
-      <li>Abbas, A., Cox, B. R., Tran, K. T., Corey, I., <strong>Dawadi, N.</strong> (2023). “An open-access dataset of active-source and passive-wavefield DAS and nodal station measurements at the Newberry Florida site.” <em>Seismological Research Letters</em>.
-        <span class="pub-links"><a href="https://doi.org/10.1785/0220230216">DOI</a></span></li>
-    </ol>
-    <p class="note">In preparation: <strong>Dawadi, N.</strong>, Cox, B. R. “Three-dimensional nonlinear site response analyses at the Delaney Park downhole array site.”</p>
-
-    <h3 class="pub-group">Conference papers</h3>
-    <ol class="pubs" reversed>
-      <li><strong>Dawadi, N.</strong>, Mohammadi, K., Hallal, M. M., Cox, B. R. (2026). “Comparative assessment of damping models for small-strain ground response analysis: A case study at the Delaney Park downhole array site.” <em>21st International Conference on Soil Mechanics and Geotechnical Engineering (ICSMGE)</em>, Vienna, Austria.
-        <span class="pub-links"><a href="https://doi.org/10.53243/ICSMGE2026-827">DOI</a></span></li>
-      <li>Aimar, M., Abbas, A., <strong>Dawadi, N.</strong>, Cox, B. R., Foti, S. (2026). “In-situ estimation of a pseudo-3D model of shear wave velocity and small strain damping ratio using surface wave testing.” <em>21st ICSMGE</em>, Vienna, Austria.
-        <span class="pub-links"><a href="https://doi.org/10.53243/ICSMGE2026-1691">DOI</a></span></li>
-      <li><strong>Dawadi, N.</strong>, Jackson, T. S., Cox, B. R. (2026). “Three-dimensional ground response analyses at the I-15 downhole array site near Salt Lake City.” <em>Geo-Congress 2026</em>, pp. 504–514, Salt Lake City, USA.
-        <span class="pub-links"><a href="https://doi.org/10.1061/9780784486702.049">DOI</a></span></li>
-      <li><strong>Dawadi, N.</strong>, Hallal, M. M., Cox, B. R. (2024). “Two-dimensional ground response analyses at the Delaney Park downhole array site.” <em>8th International Conference on Earthquake Geotechnical Engineering</em>, Osaka, Japan.
-        <span class="pub-links"><a href="https://doi.org/10.3208/jgssp.v10.SS-3-01">DOI</a></span></li>
-    </ol>
-
-    <h3 class="pub-group">Open-access datasets</h3>
-    <ol class="pubs" reversed>
-      <li>Cox, B. R., Jackson, T., <strong>Dawadi, N.</strong>, Cannon, K. (2025). The I-15 Downhole Array (I15DA): A database of non-invasive site characterization data and aftershock ground motions following the 2020 M5.7 Magna, Utah earthquake. <em>DesignSafe-CI</em>.
-        <span class="pub-links"><a href="https://doi.org/10.17603/ds2-xt4m-xa77">DOI</a></span></li>
-      <li>Hallal, M. M., Cox, B. R., <strong>Dawadi, N.</strong>, Teague, D. (2025). Raw field measurements from Garner Valley, Borrego Valley, Treasure Island, and Delaney Park downhole arrays. <em>DesignSafe-CI</em>.
-        <span class="pub-links"><a href="https://doi.org/10.17603/ds2-yek8-8a25">DOI</a></span></li>
-      <li>Abbas, A., Cox, B. R., <strong>Dawadi, N.</strong>, Jackson, T., Cannon, K. (2024). Geotechnical site characterization at the Drainage Farm site. <em>DesignSafe-CI</em>.
-        <span class="pub-links"><a href="https://doi.org/10.17603/ds2-sx2h-8s20">DOI</a></span></li>
-      <li>Abbas, A., Cox, B. R., Tran, K., Corey, I., <strong>Dawadi, N.</strong>, Menq, F. (2023). Active-source and passive-wavefield DAS and nodal station measurements at the Newberry Florida site. <em>DesignSafe-CI</em>.
-        <span class="pub-links"><a href="https://doi.org/10.17603/ds2-50eh-7v93">DOI</a></span></li>
-    </ol>
-
-    <h3 class="pub-group">Selected technical reports</h3>
-    <ul class="pubs plain">
-      <li>Cox, B. R., <strong>Dawadi, N.</strong>, Bhaumik, M., Budge, B. (2026). Deep shear wave velocity profiling using MASW and MAM surface wave methods: Energy Northwest New Nuclear Cascade Advanced Energy Facility site. Report COX26-03, Utah State University.</li>
-      <li>Cox, B. R., Jackson, T., <strong>Dawadi, N.</strong> (2024). Calibrating ground response analyses beneath an instrumented bridge using the I-15 borehole array and ground motions from the 2020 M5.7 Magna earthquake. MPC 24-517, Mountain-Plains Consortium.
-        <span class="pub-links"><a href="https://rosap.ntl.bts.gov/view/dot/74618">Report</a></span></li>
-      <li>Four further reports on deep Vs profiling and Vs30 site classification (Palisades NPP, Kemmerer Unit 1, USU SMASH Lab) are listed in the <a href="Nishkarsha_Dawadi_CV.pdf">CV</a>.</li>
-    </ul>
-  </section>
-
-  <section id="experience">
-    <h2>Experience</h2>
-    <dl class="cv">
-      <dt>2021–present</dt><dd><strong>Graduate Research Assistant</strong>, Utah State University. Multi-dimensional site response modeling, geophysical site characterization, and industry-sponsored deep Vs profiling for nuclear power and transportation projects.</dd>
-      <dt>2020–2021</dt><dd><strong>Geotechnical Engineer</strong>, Easy Technical Services Pvt. Ltd., Kathmandu. Site investigations and geotechnical reports for roadway and foundation projects.</dd>
-      <dt>2018–2019</dt><dd><strong>Civil Engineer</strong>, National Reconstruction Authority, Government of Nepal. Inspected reconstruction of 400+ houses damaged in the 2015 Gorkha earthquake and led community programs on earthquake-resistant building.</dd>
-    </dl>
-    <h3 class="pub-group">Teaching</h3>
-    <ul class="plain-list">
-      <li>Instructor, CEE 6340: In-Situ Site Characterization, Utah State University</li>
-      <li>Guest Lecturer, CEE 6930: Numerical Methods (numerical damping in FLAC3D site response)</li>
-    </ul>
-    <h3 class="pub-group">Service</h3>
-    <ul class="plain-list">
-      <li>President (2024–2025) and Inaugural Secretary (2022–2023), EERI Student Chapter, Utah State University</li>
-      <li>Member: EERI, ASCE, Nepal Geotechnical Society; Registered Engineer, Nepal Engineering Council</li>
-    </ul>
-  </section>
-
-  <section id="cv">
-    <h2>Education</h2>
-    <dl class="cv">
-      <dt>2021–present</dt><dd><strong>Ph.D., Civil and Environmental Engineering (Geotechnical)</strong>, Utah State University. Dissertation: <em>Multi-Dimensional Site Response Analysis at Downhole Array Sites</em>. Advisor: Dr. Brady R. Cox.</dd>
-      <dt>2020</dt><dd><strong>M.S., Geotechnical Engineering</strong>, Tribhuvan University, Nepal. Graduated with distinction.</dd>
-      <dt>2016</dt><dd><strong>B.S., Civil Engineering</strong>, Tribhuvan University, Nepal.</dd>
-    </dl>
-    <p><a class="button" href="Nishkarsha_Dawadi_CV.pdf">Download full CV (PDF)</a></p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p><a href="mailto:nishkarsha.dawadi@usu.edu">nishkarsha.dawadi@usu.edu</a><br>
-       Department of Civil and Environmental Engineering<br>
-       Utah State University, 4110 Old Main Hill, Logan, UT 84322</p>
-  </section>
-</main>
-
-<footer>© 2026 Nishkarsha Dawadi</footer>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="footer-name">Nishkarsha Dawadi</p>
+      <p>Ph.D. Candidate, Geotechnical Earthquake Engineering<br>Department of Civil and Environmental Engineering<br>Utah State University, Logan, Utah</p>
+    </div>
+    <div>
+      <p class="footer-head">Get in touch</p>
+      <p><a href="mailto:nishkarsha.dawadi@usu.edu">nishkarsha.dawadi@usu.edu</a></p>
+      <p class="footer-links"><a href="https://scholar.google.com/citations?user=vI1wl_IAAAAJ&amp;hl=en">Google Scholar</a><a href="https://www.linkedin.com/in/ndawadi/">LinkedIn</a><a href="Nishkarsha_Dawadi_CV.pdf">CV</a></p>
+    </div>
+  </div>
+  <div class="wrap copyright">© 2026 Nishkarsha Dawadi</div>
+</footer>
 </body>
 </html>
