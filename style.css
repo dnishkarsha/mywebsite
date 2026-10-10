@@ -209,3 +209,5 @@ h1,h2,h3{font-family:var(--serif);color:var(--ink);line-height:1.2;margin:0 0 .6
 .event li{margin:.3rem 0}
 @media (max-width:900px){.stats{grid-template-columns:1fr 1fr}.event{grid-template-columns:1fr;gap:20px}.event.flip > .event-photos{order:0}}
 @media (max-width:680px){.page-head.photo::before{background:rgba(14,24,40,.78)}.page-head.photo{padding:80px 0 60px}}
+.gallery.g2{grid-template-columns:1fr 1fr}
+@media (max-width:680px){.gallery.g2{grid-template-columns:1fr}}
