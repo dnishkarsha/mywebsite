@@ -229,3 +229,4 @@ h1,h2,h3{font-family:var(--serif);color:var(--ink);line-height:1.2;margin:0 0 .6
 .page-head.photo.tall .wrap{width:100%}
 .hero{min-height:0}.hero-inner{padding-top:64px;padding-bottom:64px}
 .hero-shade{background:linear-gradient(100deg,rgba(14,24,40,.78) 0%,rgba(14,24,40,.5) 55%,rgba(14,24,40,.3) 100%)}
+.thanks{margin:1.6rem 0 0}.signature{font-family:"Mrs Saint Delafield",cursive;font-size:4.2rem;line-height:1.1;color:var(--navy);margin:.4rem 0 0}
