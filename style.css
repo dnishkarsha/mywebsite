@@ -225,3 +225,5 @@ h1,h2,h3{font-family:var(--serif);color:var(--ink);line-height:1.2;margin:0 0 .6
 .csub{font-size:.9rem;color:var(--muted)}
 .book{margin-top:40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:1.8rem 2rem;border-radius:14px;background:var(--tint);border:1px solid var(--line)}
 .book h2{margin:0 0 .3rem;font-size:1.4rem}.book p{margin:0;color:var(--muted)}
+.page-head.photo.tall{min-height:480px;display:flex;align-items:center}
+.page-head.photo.tall .wrap{width:100%}
