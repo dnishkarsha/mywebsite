@@ -7,7 +7,7 @@
 <meta name="description" content="Nishkarsha Dawadi, Ph.D. candidate in geotechnical earthquake engineering at Utah State University.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Allura&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Allura&family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="has-hero">
@@ -20,8 +20,7 @@
   </div>
 </header>
 
-<section class="hero" style="background-image:url('images/bg-glacier.jpg');background-position:center 30%">
-  <div class="hero-shade"></div>
+<section class="hero">
   <div class="wrap hero-inner">
     <p class="eyebrow">Geotechnical Earthquake Engineering</p>
     <h1>Nishkarsha Dawadi</h1>
@@ -31,96 +30,60 @@
       <a class="btn btn-ghost" href="Nishkarsha_Dawadi_CV.pdf">Download CV</a>
     </div>
   </div>
-  <p class="hero-credit">Glacier National Park · captured by yours truly</p>
+  <svg class="quake" viewBox="0 0 1400 120" preserveAspectRatio="none" aria-hidden="true"><path class="q2" d="M0 70 L300 70 L320 66 L340 76 L360 64 L380 72 L1400 72"/><path class="q1" d="M0 60 L420 60 L440 56 L455 68 L470 50 L490 80 L505 20 L520 110 L540 8 L560 104 L580 32 L600 88 L620 46 L640 74 L660 54 L690 66 L720 58 L760 64 L820 60 L1400 60"/></svg>
 </section>
 
-<section class="section">
-  <div class="wrap intro">
-    <div class="portrait">
-      <img src="images/portrait.jpg" alt="Nishkarsha Dawadi">
-    </div>
-    <div>
-      <h2 class="section-title">About me</h2>
-      <p class="lead">I develop and calibrate large-scale <strong>2D and 3D seismic site response models</strong> at instrumented downhole array sites, combining numerical modeling with field measurements to understand when one-dimensional assumptions break down.</p>
-      <p>My dissertation, <em>Multi-Dimensional Site Response Analysis at Downhole Array Sites</em>, is advised by Dr. Brady R. Cox. Alongside modeling in FLAC3D and Seismo-VLAB, I spend a lot of time in the field: deep shear-wave velocity profiling with MASW and MAM surface-wave methods, spatially distributed HVSR, and distributed acoustic sensing (DAS). I have contributed to NQA-1-compliant site characterization at three nuclear power sites.</p>
-      <p>Before Utah State, I earned my M.S. in Geotechnical Engineering (with distinction) and B.S. in Civil Engineering from Tribhuvan University in Nepal, and inspected post-earthquake reconstruction after the 2015 Gorkha earthquake.</p>
-      <div class="chips">
-        <span>Seismic site response</span><span>Wave propagation</span><span>Computational geomechanics</span><span>Site characterization</span><span>Geostatistics</span><span>Infrastructure resilience</span>
+<div class="wrap">
+<div class="bento">
+  <div class="t w2 h2 about-tile">
+    <p class="lbl">About me</p>
+    <div class="about-grid">
+      <img class="ava" src="images/portrait.jpg" alt="Nishkarsha Dawadi">
+      <div>
+        <p class="lead">I develop and calibrate large-scale <strong>2D and 3D seismic site response models</strong> at instrumented downhole array sites, combining numerical modeling with field measurements to understand when one-dimensional assumptions break down.</p>
+        <p>My dissertation, <em>Multi-Dimensional Site Response Analysis at Downhole Array Sites</em>, is advised by Dr. Brady R. Cox. Alongside modeling in FLAC3D and Seismo-VLAB, I spend a lot of time in the field: deep shear-wave velocity profiling with MASW and MAM, spatially distributed HVSR, and distributed acoustic sensing (DAS).</p>
+        <p>Before Utah State, I earned my M.S. in Geotechnical Engineering (with distinction) and B.S. in Civil Engineering from Tribhuvan University in Nepal, and inspected post-earthquake reconstruction after the 2015 Gorkha earthquake.</p>
+        <p class="thanks">Thanks for visiting!</p>
+        <p class="signature" aria-label="nish">nish</p>
       </div>
-      <p class="thanks">Thanks for visiting!</p>
-      <p class="signature" aria-label="nish">nish</p>
     </div>
   </div>
-</section>
+  <a class="t img" href="research.html#field"><img src="images/field-desert.jpg" alt="Field engineers with equipment in sagebrush"><span class="cap">Deep Vs profiling at a nuclear power plant site in Washington</span></a>
+  <div class="t stat-t teal"><b>3</b><span>nuclear power sites characterized to NQA-1 standards</span></div>
+  <div class="t stat-t orange"><b>2 km</b><span>of distributed acoustic sensing cable deployed in Newberry, Florida</span></div>
+  <a class="t img" href="research.html#field"><img src="images/hero-shaker.jpg" alt="Nishkarsha beside the T-Rex mobile shaker"><span class="cap">T-Rex mobile shaker, Newberry, Florida</span></a>
 
-<section class="section tinted">
-  <div class="wrap">
-    <div class="section-head"><h2 class="section-title">Research at a glance</h2><a class="more" href="research.html">All research →</a></div>
-    <div class="card-grid">
-      <a class="card" href="research.html#multi-d">
-        <img class="fig" src="images/fig-four-sites.jpg" alt="3D velocity models at four downhole array sites">
-        <div class="card-body"><h3>Multi-dimensional site response</h3><p>2D and 3D models at downhole arrays in Alaska, Utah and California.</p></div>
-      </a>
-      <a class="card" href="research.html#damping">
-        <img class="fig" src="images/fig-rayleigh.jpg" alt="Rayleigh damping curves">
-        <div class="card-body"><h3>Numerical damping</h3><p>Which damping formulations reproduce recorded small-strain site response.</p></div>
-      </a>
-      <a class="card" href="research.html#field">
-        <img src="images/field-geophones.jpg" alt="Setting up a geophone array for surface-wave testing">
-        <div class="card-body"><h3>Geophysical site characterization</h3><p>Deep Vs profiling, HVSR, and 2 km of distributed acoustic sensing.</p></div>
-      </a>
-    </div>
-  </div>
-</section>
+  <div class="t img w2"><img src="images/bg-glacier.jpg" alt="Mountains and lake in Glacier National Park" style="object-position:center 35%"><span class="cap">Glacier National Park · captured by yours truly</span></div>
 
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><h2 class="section-title">Highlights</h2><a class="more" href="publications.html">All publications →</a></div>
-    <div class="highlights">
-      <article class="hl">
-        <img class="fig" src="images/fig-inclined-schematic.jpg" alt="Inclined wavefront in a 2D site model">
-        <div><span class="tag">Journal · 2026</span>
-        <h3>Incident wave inclination and azimuth</h3>
-        <p>Our paper in <em>Soil Dynamics and Earthquake Engineering</em> shows how inclined and azimuthally varying waves change multi-dimensional ground response at the Delaney Park downhole array.</p>
-        <a class="pill" href="https://doi.org/10.1016/j.soildyn.2026.110630">Read the paper ↗</a></div>
-      </article>
-      <article class="hl">
-        <img class="fig" src="images/fig-rayleigh.jpg" alt="Damping model comparison">
-        <div><span class="tag">Journal · 2026</span>
-        <h3>Insights on numerical damping</h3>
-        <p>Published in <em>Earthquake Spectra</em>: what calibrating 2D ground response analyses at downhole arrays teaches us about numerical damping formulations.</p>
-        <a class="pill" href="https://doi.org/10.1002/esp4.70087">Read the paper ↗</a></div>
-      </article>
-      <article class="hl">
-        <img class="fig" src="images/fig-vs-profiles.jpg" alt="Shear-wave velocity profiles at four downhole arrays, including I-15">
-        <div><span class="tag">Conference · 2026</span>
-        <h3>3D ground response at the I-15 array</h3>
-        <p>Presented at Geo-Congress 2026 in Salt Lake City: three-dimensional analyses built on a kriged HVSR-based velocity model.</p>
-        <a class="pill" href="https://doi.org/10.1061/9780784486702.049">Read the paper ↗</a></div>
-      </article>
-      <article class="hl">
-        <img class="fig" src="images/fig-delaney-3d.jpg" alt="3D Vs and damping model at Delaney Park">
-        <div><span class="tag">Conference · 2026</span>
-        <h3>Two papers at ICSMGE 2026, Vienna</h3>
-        <p>A comparative assessment of small-strain damping models, and a pseudo-3D Vs and damping model from surface-wave testing.</p>
-        <a class="pill" href="https://doi.org/10.53243/ICSMGE2026-827">Paper 1 ↗</a> <a class="pill" href="https://doi.org/10.53243/ICSMGE2026-1691">Paper 2 ↗</a></div>
-      </article>
-    </div>
+  <a class="t w2 h2 fig-t" href="research.html#multi-d">
+    <p class="lbl">Research</p>
+    <img src="images/fig-four-sites.jpg" alt="3D velocity models at four downhole array sites">
+    <h3>Multi-dimensional site response at four downhole arrays</h3>
+    <p>2D and 3D models at downhole arrays in Alaska, Utah and California. <span class="go">All research →</span></p>
+  </a>
+  <div class="t w2 h2 dark papers-t">
+    <p class="lbl">Recent papers</p>
+    <ul>
+      <li><a href="https://doi.org/10.1016/j.soildyn.2026.110630">Incident wave inclination and azimuth in multi-dimensional ground response</a><em>Soil Dynamics and Earthquake Engineering · 2026</em></li>
+      <li><a href="https://doi.org/10.1002/esp4.70087">Insights on numerical damping formulations from calibrated 2D analyses</a><em>Earthquake Spectra · 2026</em></li>
+      <li><a href="https://doi.org/10.1061/9780784486702.049">3D ground response at the I-15 downhole array</a><em>Geo-Congress 2026, Salt Lake City</em></li>
+      <li><a href="https://doi.org/10.53243/ICSMGE2026-827">Two papers on small-strain damping and pseudo-3D Vs models</a><em>ICSMGE 2026, Vienna</em></li>
+    </ul>
+    <a class="go" href="publications.html">All publications →</a>
   </div>
-</section>
 
-<section class="section tinted">
-  <div class="wrap">
-    <div class="section-head"><h2 class="section-title">Beyond research</h2><a class="more" href="personal.html">More about me →</a></div>
-    <p class="life-text">Outside work you'll find me on a trail in Utah's national parks or watching AC Milan play.</p>
-    <div class="life-grid">
-      <figure><img src="images/p-glacier-milan.jpg" alt="Nishkarsha in a Maldini jersey at Glacier National Park"><figcaption>Hidden Lake, Glacier National Park</figcaption></figure>
-      <figure><img src="images/p-delicate-arch.jpg" alt="Nishkarsha at Delicate Arch"><figcaption>Delicate Arch, Arches National Park</figcaption></figure>
-      <figure><img src="images/p-canyon.jpg" alt="Nishkarsha atop Angels Landing in Zion National Park"><figcaption>Angels Landing, Zion National Park</figcaption></figure>
-      <figure><a href="personal.html" class="life-more"><span>See more photos →</span></a></figure>
-    </div>
+  <a class="t img" href="outreach.html"><img src="images/eeri-community-2.jpg" alt="Chapter members explaining a demonstration to visitors"><span class="cap">Outreach with the USU EERI Student Chapter →</span></a>
+  <a class="t fig-t small" href="research.html#damping"><img src="images/fig-rayleigh.jpg" alt="Rayleigh damping curves"><h3>Numerical damping</h3></a>
+
+  <a class="t img" href="personal.html"><img src="images/p-glacier-milan.jpg" alt="Nishkarsha in a Maldini jersey at Glacier National Park"><span class="cap">Forza Milan at Hidden Lake →</span></a>
+  <a class="t img" href="personal.html"><img src="images/p-delicate-arch.jpg" alt="Nishkarsha at Delicate Arch"><span class="cap">Delicate Arch, Arches National Park</span></a>
+  <div class="t w4 stat-t navy cta">
+    <p class="lbl">Get in touch</p>
+    <a class="mail" href="mailto:nishkarsha.dawadi@usu.edu">nishkarsha.dawadi@usu.edu</a>
+    <div class="hero-actions"><a class="btn btn-primary" href="https://calendar.app.google/JYR8mPtgxVqR2pWV6" target="_blank" rel="noopener">Book a time ↗</a><a class="btn btn-ghost" href="contact.html">All links</a></div>
   </div>
-</section>
+</div>
+</div>
 
 <footer class="site-footer">
   <div class="wrap footer-grid">
