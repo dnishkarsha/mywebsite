@@ -473,3 +473,9 @@ a.plink:hover{transform:translateY(-2px);text-decoration:none;color:var(--ink);b
 .hero.photo-hero > *{position:relative}
 .hero.photo-hero .hero-credit{position:absolute;right:16px;bottom:64px;margin:0;font-size:.75rem;color:rgba(255,255,255,.75);z-index:1}
 @media (max-width:680px){.hero.photo-hero .hero-credit{display:block;bottom:48px}}
+/* v3: hero figure sits directly on the header photo; zoomable figure slides */
+.hero-video{background:transparent;box-shadow:none;border-radius:0;overflow:visible}
+.hero-video img{background:transparent;aspect-ratio:auto;filter:drop-shadow(0 10px 24px rgba(0,0,0,.35))}
+.hero-video figcaption{background:none;padding:6px 0 0;color:#d3dbe7;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.slide a.zoom{flex:1;min-height:0;display:flex;cursor:zoom-in;background:#fff}
+.slide a.zoom img{width:100%;height:100%;object-fit:contain}
