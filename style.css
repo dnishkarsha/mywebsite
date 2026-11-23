@@ -485,3 +485,10 @@ a.plink:hover{transform:translateY(-2px);text-decoration:none;color:var(--ink);b
 .photo-hero .hero-split{align-items:center}
 .photo-hero .quake{height:90px;margin:8px 0 64px}
 @media (max-width:900px){.photo-hero .hero-video{max-width:340px}}
+/* home CTA social links */
+.cta .socials{display:flex;flex-wrap:wrap;gap:10px}
+.cta .soc{display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 8px;border-radius:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:#fff;font-weight:600;font-size:.95rem;transition:background .2s,transform .2s}
+.cta .soc:hover{background:rgba(255,255,255,.16);transform:translateY(-2px);text-decoration:none;color:#fff}
+.cta .soc .cbadge{width:34px;height:34px;border-radius:9px;font-size:.95rem;margin:0}
+@media (max-width:680px){.cta .socials{margin-bottom:16px}}
+.cta .mail .m-text{font:600 clamp(1.05rem,1.8vw,1.4rem) var(--display);color:#fff}.cta .mail i{font-style:normal;color:#93a3bb}
