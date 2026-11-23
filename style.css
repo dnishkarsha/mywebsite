@@ -362,3 +362,6 @@ a.t.img:hover img{transform:scale(1.05)}
 .news-t + .bento{margin-top:0}
 .news li:first-child{border-top:0}
 @media (max-width:680px){.news-t{margin-top:-40px}}
+.news li{grid-template-columns:130px 1fr 440px}
+.news-video{border-radius:14px;box-shadow:0 12px 30px -14px rgba(15,27,45,.45)}
+@media (max-width:1000px){.news li{grid-template-columns:1fr}}
