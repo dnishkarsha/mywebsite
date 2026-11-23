@@ -454,3 +454,22 @@ a.plink:hover{transform:translateY(-2px);text-decoration:none;color:var(--ink);b
 @media (max-width:900px){.contact-grid{grid-template-columns:1fr}.form-card iframe{height:1150px}}
 @media (max-width:520px){.ctiles.two{grid-template-columns:1fr}.ctiles.two .ctile:last-child:nth-child(odd){grid-column:auto}}
 .contact-grid .email-big{font-size:clamp(1.25rem,2.3vw,1.8rem);white-space:nowrap}@media (max-width:520px){.contact-grid .email-big{white-space:normal}}
+/* Research intro as projects */
+.r-intro{display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:center;margin-bottom:36px}
+.r-title{font-size:clamp(1.7rem,3vw,2.4rem);margin:.1rem 0 .8rem}
+.r-video{margin:0;border-radius:var(--radius);overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+.r-video video{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#fff}
+.r-video figcaption{font-size:.85rem;color:var(--muted);padding:10px 14px;border-top:1px solid #eee}
+.proj-nav{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:0 0 56px}
+.proj-nav a{background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);color:var(--ink);font-weight:600;font-size:.92rem;line-height:1.3;display:flex;flex-direction:column;transition:transform .2s}
+.proj-nav a:hover{transform:translateY(-3px);text-decoration:none;color:var(--accent)}
+.proj-nav img{width:100%;height:110px;object-fit:cover;background:#fff}
+.proj-nav span{padding:12px 14px 14px}
+.chapter .q{font:500 1.05rem var(--display);color:var(--accent);margin:-.5rem 0 1rem}
+.hero-video img{display:block;width:100%;aspect-ratio:16/10;object-fit:contain;background:#eef1f5}
+@media (max-width:900px){.r-intro{grid-template-columns:1fr}.proj-nav{grid-template-columns:1fr 1fr}}
+.hero.photo-hero{background-color:var(--navy);background-size:cover;background-position:center 30%;position:relative}
+.hero.photo-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(15,27,45,.9) 0%,rgba(15,27,45,.7) 45%,rgba(15,27,45,.45) 100%)}
+.hero.photo-hero > *{position:relative}
+.hero.photo-hero .hero-credit{position:absolute;right:16px;bottom:64px;margin:0;font-size:.75rem;color:rgba(255,255,255,.75);z-index:1}
+@media (max-width:680px){.hero.photo-hero .hero-credit{display:block;bottom:48px}}

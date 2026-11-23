@@ -24,22 +24,33 @@
 <section class="page-head photo" style="background-image:url('images/bg-bryce.jpg');background-position:center 55%">
   <div class="wrap"><p class="eyebrow">Research</p><h1>Understanding earthquake shaking from the ground up</h1>
   <p class="hero-sub dark">Local soil and rock conditions can amplify or reduce earthquake shaking. My work asks when simple one-dimensional models are good enough, and builds the multi-dimensional models and field datasets needed when they are not.</p></div>
-  <p class="photo-credit">Bryce Canyon, Utah · captured by yours truly</p>
+  <p class="photo-credit">Bryce Canyon, Utah</p>
   <svg class="quake" viewBox="0 0 1400 120" preserveAspectRatio="none" aria-hidden="true"><path class="q2" d="M0 70 L300 70 L320 66 L340 76 L360 64 L380 72 L1400 72"/><path class="q1" d="M0 60 L420 60 L440 56 L455 68 L470 50 L490 80 L505 20 L520 110 L540 8 L560 104 L580 32 L600 88 L620 46 L640 74 L660 54 L690 66 L720 58 L760 64 L820 60 L1400 60"/></svg>
 </section>
 <section class="section">
   <div class="wrap">
-    <div class="diss-head">
-      <p class="lbl">Ph.D. dissertation · Utah State University · defended November 10, 2026</p>
-      <h2 class="diss-title">Multi-Dimensional Site Response Analyses at Downhole Array Sites Integrating Site-Specific 3D V<sub>s</sub> Models, Spatially Correlated Random Fields, Damping Formulations, and Wave Incidence Patterns</h2>
-      <p class="muted">Advisor: Dr. Brady R. Cox · <a href="#defense">Watch the defense ↓</a></p>
+    <div class="r-intro">
+      <div>
+        <p class="lbl">Research overview</p>
+        <h2 class="r-title">How the ground shapes earthquake shaking</h2>
+        <p>My research combines large-scale numerical modeling with field measurements to understand how local soil and rock conditions amplify earthquake shaking, and when the simple one-dimensional models used in practice break down. I work at instrumented <strong>downhole arrays</strong>, sites where earthquakes are recorded both at the ground surface and deep below it, which let me test model predictions directly against what the ground actually did.</p>
+        <p class="muted">Much of this work formed my Ph.D. dissertation at Utah State University with Dr. Brady R. Cox (defended November 2026). <a href="#defense">Watch the defense talk ↓</a></p>
+      </div>
+      <figure class="r-video">
+        <video src="media/02-base-model-inclined-15deg.mp4" poster="media/02-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Animation of a 15 degree inclined seismic wave propagating through a 2D soil model"></video>
+        <figcaption>A 15° inclined seismic wave sweeping through my 2D model of the Delaney Park downhole array, Anchorage, with the recorded motions at the surface and downhole sensors.</figcaption>
+      </figure>
     </div>
-    <nav class="toc">
-      <a href="#problem"><b>01</b>The problem</a><a href="#sites"><b>02</b>Four downhole arrays</a><a href="#damping"><b>03</b>Damping formulations</a><a href="#inclined"><b>04</b>Inclined waves</a><a href="#conundrum"><b>05</b>The downhole array conundrum</a><a href="#takeaways"><b>06</b>Takeaways &amp; future work</a>
+    <nav class="proj-nav">
+      <a href="#sites"><img src="images/fig-four-sites.jpg" alt=""><span>Multi-dimensional site response &amp; 3D V<sub>s</sub> models</span></a>
+      <a href="#damping"><img src="images/fig-rayleigh.jpg" alt=""><span>Numerical damping formulations</span></a>
+      <a href="#inclined"><img src="images/fig-inclined-schematic.jpg" alt=""><span>Inclined &amp; incoherent incident waves</span></a>
+      <a href="#conundrum"><img src="images/fig-random-field-frame.jpg" alt=""><span>The downhole array conundrum</span></a>
+      <a href="#field"><img src="images/field-nodes.jpg" alt=""><span>Geophysical site characterization</span></a>
     </nav>
 
     <div class="anim-block" id="animations">
-      <div class="anim-head"><p class="lbl">Animations from my defense</p><h2>Watching waves move through the models</h2><p class="muted">Simulations from my dissertation, played automatically. Use the arrows or dots to jump between them.</p></div>
+      <div class="anim-head"><p class="lbl">Simulations &amp; results</p><h2>Watching waves move through the models</h2><p class="muted">Animations and key results from my research, played automatically. Use the arrows or dots to jump between them.</p></div>
       <div class="slideshow big" data-interval="9000">
   <div class="slides"><figure class="slide on"><video src="media/02-base-model-inclined-15deg.mp4" muted playsinline preload="auto"></video><figcaption>15° inclined plane wave propagating through the 2D base model at Delaney Park</figcaption></figure><figure class="slide"><video src="media/01-base-model-vertical-input.mp4" muted playsinline preload="metadata"></video><figcaption>The same base model with vertically propagating input</figcaption></figure><figure class="slide"><img src="media/00-pseudo3D-Vs-model-DPDA.gif" alt="Rotating pseudo-3D V<sub>s</sub> model of the Delaney Park array, with the f<sub>0,H/V</sub> map on top" loading="lazy"><figcaption>Rotating pseudo-3D V<sub>s</sub> model of the Delaney Park array, with the f<sub>0,H/V</sub> map on top</figcaption></figure><figure class="slide"><video src="media/03-random-soil-vs-base-vertical.mp4" muted playsinline preload="metadata"></video><figcaption>Base model vs. a spatially correlated random-field soil, vertical input</figcaption></figure><figure class="slide"><video src="media/04-plane-wave-vs-SVGM-15deg.mp4" muted playsinline preload="metadata"></video><figcaption>15° coherent plane wave vs. spatially variable (SVGM) incoherent input</figcaption></figure><figure class="slide"><video src="media/05-random-soil-plus-SVGM-15deg.mp4" muted playsinline preload="metadata"></video><figcaption>Random-field soil combined with SVGM incoherent input at 15°</figcaption></figure></div>
   <button class="nav-arrow prev" aria-label="Previous">‹</button><button class="nav-arrow next" aria-label="Next">›</button>
@@ -47,13 +58,13 @@
 </div>
     </div>
 
-    <article class="chapter" id="problem">
+    <article class="chapter why" id="problem">
       <div class="ch-text">
-        <p class="lbl">01 · The problem</p>
+        <p class="lbl">Why it matters</p>
         <h2>Why the last few tens of meters matter</h2>
         <p>During the 1985 M8 Mexico City earthquake, roughly 10,000 people died and more than 400 buildings collapsed, largely because of <strong>local site effects</strong>. The soft soils beneath the city make up only about 0.01% of the ~400 km path the seismic waves traveled, yet they dramatically amplified the shaking.</p>
         <p>Engineers usually predict this amplification with one-dimensional (1D) site response analyses. Downhole arrays, which record earthquakes both at the surface and at depth, let us check those predictions against reality, and the record is sobering: about <strong>half of 662 downhole array sites</strong> are poorly modeled by 1D analyses (Hallal et al. 2022). At many sites the theoretical transfer functions (TTFs) systematically over-predict the empirical ones (ETFs) computed from recorded motions.</p>
-        <p>My dissertation asks why, and whether moving to 2D and 3D models, better damping formulations, inclined waves, or spatial variability can close the gap.</p>
+        <p>My research asks why, and whether moving to 2D and 3D models, better damping formulations, inclined waves, or spatial variability can close the gap.</p>
       </div>
       <div class="kpis">
         <div class="kpi navy"><b>~50%</b><span>of 662 downhole arrays poorly modeled in 1D</span></div>
@@ -65,8 +76,8 @@
 
     <article class="chapter wide" id="sites">
       <div class="ch-text">
-        <p class="lbl">02 · Study sites</p>
-        <h2>Four downhole arrays, four site-specific 3D V<sub>s</sub> models</h2>
+        <p class="lbl">Research project</p>
+        <h2>Multi-dimensional site response with site-specific 3D V<sub>s</sub> models</h2>
         <p>For each array I built a <strong>pseudo-3D shear-wave velocity (V<sub>s</sub>) model</strong> by combining spatially distributed horizontal-to-vertical spectral ratio (H/V) measurements with geostatistical kriging. From each 3D model, the most laterally variable 2D cross-section (for example, azimuth 165° at Delaney Park) is extracted for 2D analyses, and km-scale 2D and 3D models are run in FLAC.</p>
         <div class="table-wrap"><table class="ftable">
           <thead><tr><th>Array</th><th>Location</th><th>H/V measurements</th></tr></thead>
@@ -87,8 +98,9 @@
 
     <article class="chapter" id="damping">
       <div class="ch-text">
-        <p class="lbl">03 · Damping formulations</p>
-        <h2>How should numerical models dissipate energy?</h2>
+        <p class="lbl">Research project</p>
+        <h2>Numerical damping formulations</h2>
+        <p class="q">How should numerical models dissipate energy?</p>
         <p>Even 2D and 3D analyses on site-specific models still over-predicted the recorded amplification peak. That pointed to damping: real soil loses energy not only through intrinsic material damping but through <strong>“apparent” damping</strong> (wave scattering and mode conversion) that the models do not capture.</p>
         <p>I back-calculated the minimum damping (D<sub>min</sub>) multipliers needed to match the recordings: <strong>8× at DPDA, 10× at I15DA, 2× at TIDA and 3× at GVDA</strong>. The multiplier correlates with velocity contrast, so low-contrast sites need larger multipliers.</p>
         <p>I then compared three formulations: Full Rayleigh (FR), Maxwell (MX) and Rayleigh mass-only (RM). <strong>Rayleigh mass-only performed best at three of four sites</strong>, with 27–44% lower transfer-function misfit than Full Rayleigh and 44–49% lower than Maxwell. It also allowed 5–30× larger time steps (at DPDA, FR drops to 0.032 ms while RM stays at 0.35 ms). Its frequency-dependent damping decays much like the trend Kokusho (2017) observed across KiK-net sites.</p>
@@ -111,8 +123,9 @@
 
     <article class="chapter" id="inclined">
       <div class="ch-text">
-        <p class="lbl">04 · Inclined incident waves</p>
-        <h2>Does the angle of the incoming wave explain the mismatch?</h2>
+        <p class="lbl">Research project</p>
+        <h2>Inclined and incoherent incident waves</h2>
+        <p class="q">Does the angle of the incoming wave explain the mismatch?</p>
         <p>Most site response models assume waves arrive vertically. I tested two ways of applying inclined waves in km-scale 2D and 3D FLAC models: the <strong>Input Lag Method (ILM)</strong> and the Inclined Domain Method (IDM). IDM needs up to ~500% more zones at 30°, and ILM performed better, so it was used throughout.</p>
         <ul class="facts">
           <li>Up to 15° inclination, transfer-function misfit changed by less than 13% (2D: 1.88 → 1.65; 3D: 1.68 → 1.62).</li>
@@ -132,8 +145,9 @@
 
     <article class="chapter" id="conundrum">
       <div class="ch-text">
-        <p class="lbl">05 · The downhole array conundrum <span class="soon">manuscript in preparation</span></p>
-        <h2>Part of the gap lives at the bottom of the borehole</h2>
+        <p class="lbl">Research project <span class="soon">manuscript in preparation</span></p>
+        <h2>The downhole array conundrum</h2>
+        <p class="q">Part of the gap lives at the bottom of the borehole.</p>
         <p>A downhole sensor records both the <strong>upgoing</strong> wave and the <strong>downgoing</strong> wave reflected from the surface, about 0.36 s apart at DPDA. The downgoing wave carves a “spectral hole” in the transfer function at the site frequency. In the models that hole is about twice as deep as recorded, which is why model peaks reach ~25–30 versus 5.6 in the data. Removing the downgoing wave brings 1D transfer-function peaks close to the recorded ones at all four arrays.</p>
         <p>To test whether realistic variability could fill the gap, I ran:</p>
         <ul class="facts">
@@ -154,7 +168,7 @@
 
     <article class="chapter" id="takeaways">
       <div class="ch-text">
-        <p class="lbl">06 · Takeaways &amp; future work</p>
+        <p class="lbl">Looking ahead</p>
         <h2>What this means for practice</h2>
         <ul class="facts">
           <li>Multi-dimensional site response alone still over-predicts amplification at downhole arrays.</li>
