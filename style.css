@@ -481,3 +481,7 @@ a.plink:hover{transform:translateY(-2px);text-decoration:none;color:var(--ink);b
 .slide a.zoom img{width:100%;height:100%;object-fit:contain}
 .photo-hero .hero-inner{padding-top:96px}
 @media (max-width:900px){.photo-hero .hero-inner{padding-top:100px}}
+.photo-hero .hero-video{max-width:420px;justify-self:center}
+.photo-hero .hero-split{align-items:center}
+.photo-hero .quake{height:90px;margin:8px 0 64px}
+@media (max-width:900px){.photo-hero .hero-video{max-width:340px}}
