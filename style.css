@@ -408,3 +408,26 @@ a.t.img:hover img{transform:scale(1.05)}
 .n-card h3{font-size:1.15rem;margin:.2rem 0 .3rem}.n-card p{margin:0 0 .4rem;font-size:.94rem;color:#3a4350}
 .n-link{margin-top:.5rem!important}
 @media (max-width:600px){.ntl::before{left:6px}.ntl li{grid-template-columns:1fr;gap:6px;padding-left:26px}.ntl li::before{left:1px;top:6px}.n-date{text-align:left;padding:0}}
+/* Hero video */
+.hero-split{display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center}
+.hero-split .hero h1,.hero-split h1{font-size:clamp(2.4rem,5.2vw,4.4rem)}
+.hero-video{margin:0;border-radius:22px;overflow:hidden;background:#000;box-shadow:0 30px 60px -25px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.08)}
+.hero-video video{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#fff}
+.hero-video figcaption{background:rgba(255,255,255,.06);color:#b7c2d3;font-size:.85rem;padding:10px 14px}
+.hero-video figcaption a{color:#f3b27a}
+@media (max-width:900px){.hero-split{grid-template-columns:1fr;gap:28px}}
+/* Slideshow */
+.anim-block{margin:0 0 20px}
+.anim-head h2{font-size:clamp(1.5rem,2.6vw,2rem);margin:.1rem 0 .4rem}
+.slideshow{position:relative;margin-top:18px;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.slides{position:relative;aspect-ratio:16/9}
+.slide{position:absolute;inset:0;margin:0;opacity:0;transform:translateX(30px);transition:opacity .6s ease,transform .6s ease;display:flex;flex-direction:column;pointer-events:none}
+.slide.on{opacity:1;transform:none;pointer-events:auto}
+.slide video,.slide img{flex:1;min-height:0;width:100%;object-fit:contain;background:#fff}
+.slide figcaption{padding:12px 64px 44px;font-size:.92rem;color:var(--muted);text-align:center}
+.nav-arrow{position:absolute;top:44%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(15,27,45,.72);color:#fff;font-size:1.6rem;line-height:1;cursor:pointer;display:grid;place-items:center;transition:background .2s}
+.nav-arrow:hover{background:var(--accent)}.nav-arrow.prev{left:12px}.nav-arrow.next{right:12px}
+.dots{position:absolute;left:0;right:0;bottom:14px;display:flex;justify-content:center;gap:8px}
+.dot{width:10px;height:10px;border-radius:99px;border:0;background:#cfd5de;cursor:pointer;padding:0;transition:all .25s}
+.dot.on{width:28px;background:var(--accent)}
+@media (max-width:600px){.slides{aspect-ratio:4/3.4}.slide figcaption{padding:8px 14px 36px;font-size:.82rem}.nav-arrow{width:36px;height:36px;font-size:1.3rem;top:40%}}
