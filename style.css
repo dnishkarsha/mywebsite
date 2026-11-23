@@ -431,3 +431,26 @@ a.t.img:hover img{transform:scale(1.05)}
 .dot{width:10px;height:10px;border-radius:99px;border:0;background:#cfd5de;cursor:pointer;padding:0;transition:all .25s}
 .dot.on{width:28px;background:var(--accent)}
 @media (max-width:600px){.slides{aspect-ratio:4/3.4}.slide figcaption{padding:8px 14px 36px;font-size:.82rem}.nav-arrow{width:36px;height:36px;font-size:1.3rem;top:40%}}
+/* Project link buttons */
+.plinks{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 4px}
+.plink{display:flex;flex-direction:column;gap:2px;min-width:170px;padding:10px 14px;border-radius:12px;background:#fff;box-shadow:var(--shadow);border-left:4px solid var(--accent);color:var(--ink);font-size:.88rem;line-height:1.3;transition:transform .2s,box-shadow .2s}
+a.plink:hover{transform:translateY(-2px);text-decoration:none;color:var(--ink);box-shadow:0 2px 4px rgba(15,27,45,.08),0 16px 30px -14px rgba(15,27,45,.35)}
+.plink .pk{font:600 .7rem Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.plink .pl{font-weight:500}
+.pl-journal{border-left-color:var(--navy)}.pl-journal .pk{color:var(--navy)}
+.pl-conference{border-left-color:#1f6f78}.pl-conference .pk{color:#1f6f78}
+.pl-dataset{border-left-color:#7a5bb5}.pl-dataset .pk{color:#7a5bb5}
+.pl-in{border-left-color:#9aa3af}.pl-in .pk{color:#6b7280}
+.mail-obf i{font-style:normal;opacity:.75}
+.email-big .m-text{display:block;font-family:var(--display);font-size:inherit;font-weight:600;letter-spacing:0;text-transform:none;color:var(--navy);margin:0}.email-big .m-text i{color:var(--accent);opacity:1}
+/* Contact form */
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:start}
+.ctiles.two{grid-template-columns:1fr 1fr}
+.ctiles.two .ctile:last-child:nth-child(odd){grid-column:span 2}
+.book-small{margin-top:20px;color:var(--muted);font-size:.95rem}
+.form-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 20px 0;scroll-margin-top:90px}
+.form-card .lbl{margin:0 4px 6px}
+.form-card iframe{display:block;width:100%;height:1050px;border:0}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}.form-card iframe{height:1150px}}
+@media (max-width:520px){.ctiles.two{grid-template-columns:1fr}.ctiles.two .ctile:last-child:nth-child(odd){grid-column:auto}}
+.contact-grid .email-big{font-size:clamp(1.25rem,2.3vw,1.8rem);white-space:nowrap}@media (max-width:520px){.contact-grid .email-big{white-space:normal}}

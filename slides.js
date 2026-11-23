@@ -27,3 +27,9 @@ document.querySelectorAll('.slideshow').forEach(function(ss){
   if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){var v=vid(i);if(!v)return;if(e.isIntersecting){v.play().catch(function(){});}else{v.pause();}});}).observe(ss);}
   schedule();
 });
+document.querySelectorAll('.mail-obf').forEach(function(a){
+  var e=a.dataset.u+'@'+a.dataset.d;
+  function set(){a.href='mailto:'+e;}
+  a.addEventListener('mouseenter',set);a.addEventListener('focus',set);a.addEventListener('touchstart',set,{passive:true});
+  a.addEventListener('click',function(ev){set();});
+});
