@@ -28,27 +28,149 @@
   <svg class="quake" viewBox="0 0 1400 120" preserveAspectRatio="none" aria-hidden="true"><path class="q2" d="M0 70 L300 70 L320 66 L340 76 L360 64 L380 72 L1400 72"/><path class="q1" d="M0 60 L420 60 L440 56 L455 68 L470 50 L490 80 L505 20 L520 110 L540 8 L560 104 L580 32 L600 88 L620 46 L640 74 L660 54 L690 66 L720 58 L760 64 L820 60 L1400 60"/></svg>
 </section>
 <section class="section">
+  <div class="wrap">
+    <div class="diss-head">
+      <p class="lbl">Ph.D. dissertation · Utah State University · defended November 10, 2026</p>
+      <h2 class="diss-title">Multi-Dimensional Site Response Analyses at Downhole Array Sites Integrating Site-Specific 3D V<sub>s</sub> Models, Spatially Correlated Random Fields, Damping Formulations, and Wave Incidence Patterns</h2>
+      <p class="muted">Advisor: Dr. Brady R. Cox · <a href="#defense">Watch the defense ↓</a></p>
+    </div>
+    <nav class="toc">
+      <a href="#problem"><b>01</b>The problem</a><a href="#sites"><b>02</b>Four downhole arrays</a><a href="#damping"><b>03</b>Damping formulations</a><a href="#inclined"><b>04</b>Inclined waves</a><a href="#conundrum"><b>05</b>The downhole array conundrum</a><a href="#takeaways"><b>06</b>Takeaways &amp; future work</a>
+    </nav>
+
+    <article class="chapter" id="problem">
+      <div class="ch-text">
+        <p class="lbl">01 · The problem</p>
+        <h2>Why the last few tens of meters matter</h2>
+        <p>During the 1985 M8 Mexico City earthquake, roughly 10,000 people died and more than 400 buildings collapsed, largely because of <strong>local site effects</strong>. The soft soils beneath the city make up only about 0.01% of the ~400 km path the seismic waves traveled, yet they dramatically amplified the shaking.</p>
+        <p>Engineers usually predict this amplification with one-dimensional (1D) site response analyses. Downhole arrays, which record earthquakes both at the surface and at depth, let us check those predictions against reality, and the record is sobering: about <strong>half of 662 downhole array sites</strong> are poorly modeled by 1D analyses (Hallal et al. 2022). At many sites the theoretical transfer functions (TTFs) systematically over-predict the empirical ones (ETFs) computed from recorded motions.</p>
+        <p>My dissertation asks why, and whether moving to 2D and 3D models, better damping formulations, inclined waves, or spatial variability can close the gap.</p>
+      </div>
+      <div class="kpis">
+        <div class="kpi navy"><b>~50%</b><span>of 662 downhole arrays poorly modeled in 1D</span></div>
+        <div class="kpi teal"><b>4</b><span>instrumented downhole arrays studied</span></div>
+        <div class="kpi orange"><b>367</b><span>H/V measurements behind the pseudo-3D V<sub>s</sub> models</span></div>
+        <div class="kpi"><b>19</b><span>earthquakes (M3.7–4.8) analyzed at Delaney Park</span></div>
+      </div>
+    </article>
+
+    <article class="chapter wide" id="sites">
+      <div class="ch-text">
+        <p class="lbl">02 · Study sites</p>
+        <h2>Four downhole arrays, four site-specific 3D V<sub>s</sub> models</h2>
+        <p>For each array I built a <strong>pseudo-3D shear-wave velocity (V<sub>s</sub>) model</strong> by combining spatially distributed horizontal-to-vertical spectral ratio (H/V) measurements with geostatistical kriging. From each 3D model, the most laterally variable 2D cross-section (for example, azimuth 165° at Delaney Park) is extracted for 2D analyses, and km-scale 2D and 3D models are run in FLAC.</p>
+        <div class="table-wrap"><table class="ftable">
+          <thead><tr><th>Array</th><th>Location</th><th>H/V measurements</th></tr></thead>
+          <tbody>
+            <tr><td>DPDA</td><td>Delaney Park, Anchorage, Alaska</td><td>108</td></tr>
+            <tr><td>I15DA</td><td>I-15, Salt Lake City, Utah</td><td>98</td></tr>
+            <tr><td>TIDA</td><td>Treasure Island, California</td><td>98</td></tr>
+            <tr><td>GVDA</td><td>Garner Valley, California</td><td>63</td></tr>
+          </tbody></table></div>
+        <p class="muted">At Delaney Park, the downhole sensor sits at 61 m and the recorded fundamental site frequency is about 1.4 Hz with an amplification peak of about 5.6.</p>
+      </div>
+      <div class="ch-figs">
+        <figure><img src="images/fig-four-sites.jpg" alt="Pseudo-3D Vs models at four downhole arrays"><figcaption>Pseudo-3D V<sub>s</sub> models at the four arrays, built from distributed f<sub>0,H/V</sub> measurements.</figcaption></figure>
+        <figure><img src="images/fig-vs-profiles.jpg" alt="Shear-wave velocity profiles and stratigraphy at four arrays"><figcaption>V<sub>s</sub> profiles and stratigraphy at DPDA, I15DA, TIDA and GVDA.</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="chapter" id="damping">
+      <div class="ch-text">
+        <p class="lbl">03 · Damping formulations</p>
+        <h2>How should numerical models dissipate energy?</h2>
+        <p>Even 2D and 3D analyses on site-specific models still over-predicted the recorded amplification peak. That pointed to damping: real soil loses energy not only through intrinsic material damping but through <strong>“apparent” damping</strong> (wave scattering and mode conversion) that the models do not capture.</p>
+        <p>I back-calculated the minimum damping (D<sub>min</sub>) multipliers needed to match the recordings: <strong>8× at DPDA, 10× at I15DA, 2× at TIDA and 3× at GVDA</strong>. The multiplier correlates with velocity contrast, so low-contrast sites need larger multipliers.</p>
+        <p>I then compared three formulations: Full Rayleigh (FR), Maxwell (MX) and Rayleigh mass-only (RM). <strong>Rayleigh mass-only performed best at three of four sites</strong>, with 27–44% lower transfer-function misfit than Full Rayleigh and 44–49% lower than Maxwell. It also allowed 5–30× larger time steps (at DPDA, FR drops to 0.032 ms while RM stays at 0.35 ms). Its frequency-dependent damping decays much like the trend Kokusho (2017) observed across KiK-net sites.</p>
+        <div class="table-wrap"><table class="ftable">
+          <thead><tr><th>Site</th><th>Best formulation</th><th>r</th><th>m<sub>TF</sub></th></tr></thead>
+          <tbody>
+            <tr><td>DPDA</td><td>Rayleigh mass-only</td><td>0.86</td><td>2.18</td></tr>
+            <tr><td>I15DA</td><td>Rayleigh mass-only</td><td>0.64</td><td>1.21</td></tr>
+            <tr><td>TIDA</td><td>Rayleigh mass-only</td><td>0.82</td><td>1.48</td></tr>
+            <tr><td>GVDA</td><td>Full Rayleigh</td><td>0.82</td><td>1.55</td></tr>
+          </tbody></table></div>
+        <p class="muted">At DPDA, FR scored r = 0.67 / m<sub>TF</sub> = 3.68 and Maxwell r = 0.34 / m<sub>TF</sub> = 4.04.</p>
+        <p><a class="pill" href="https://doi.org/10.1002/esp4.70087">Earthquake Spectra 2026 ↗</a> <a class="pill" href="https://doi.org/10.53243/ICSMGE2026-827">ICSMGE 2026 ↗</a></p>
+      </div>
+      <div class="ch-figs">
+        <figure><img src="images/fig-rayleigh.jpg" alt="Rayleigh damping curves"><figcaption>Full Rayleigh damping and its mass- and stiffness-proportional components.</figcaption></figure>
+        <figure><img src="images/fig-delaney-3d.jpg" alt="Pseudo-3D Vs and Dmin model at Delaney Park"><figcaption>Pseudo-3D V<sub>s</sub> and D<sub>min</sub> model at Delaney Park.</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="chapter" id="inclined">
+      <div class="ch-text">
+        <p class="lbl">04 · Inclined incident waves</p>
+        <h2>Does the angle of the incoming wave explain the mismatch?</h2>
+        <p>Most site response models assume waves arrive vertically. I tested two ways of applying inclined waves in km-scale 2D and 3D FLAC models: the <strong>Input Lag Method (ILM)</strong> and the Inclined Domain Method (IDM). IDM needs up to ~500% more zones at 30°, and ILM performed better, so it was used throughout.</p>
+        <ul class="facts">
+          <li>Up to 15° inclination, transfer-function misfit changed by less than 13% (2D: 1.88 → 1.65; 3D: 1.68 → 1.62).</li>
+          <li>At 60°, misfit grew to 3.19 (2D) and 3.23 (3D), worse than 1D (2.35), because steep angles shift peaks to frequencies not seen in the recordings.</li>
+          <li>The best 3D result at DPDA came at +30° (r = 0.82, m<sub>TF</sub> = 1.52) versus 1D (r = 0.66, m<sub>TF</sub> = 2.35).</li>
+          <li>Azimuth is a secondary effect (m<sub>TF</sub> 1.28–1.55 across four azimuths at 15°).</li>
+        </ul>
+        <p><strong>Bottom line:</strong> wave inclination improves the fit modestly but does not explain the low recorded peak.</p>
+        <p><a class="pill" href="https://doi.org/10.1016/j.soildyn.2026.110630">Soil Dyn. &amp; Earthquake Eng. 2026 ↗</a> <a class="pill" href="https://doi.org/10.1061/9780784486702.049">Geo-Congress 2026 ↗</a></p>
+      </div>
+      <div class="ch-figs">
+        <figure><img src="images/fig-inclined-schematic.jpg" alt="Inclined wavefront in 2D model"><figcaption>2D model at Delaney Park with an inclined incoming wavefront (angle θ).</figcaption></figure>
+        <figure><img src="images/fig-3d-vectors.jpg" alt="3D incidence vectors"><figcaption>Defining incidence angle θ and azimuth α in 3D.</figcaption></figure>
+        <figure><img src="images/fig-epicenters.jpg" alt="Epicenters and transfer functions at DPDA"><figcaption>Earthquake epicenters around DPDA and the recorded transfer functions.</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="chapter" id="conundrum">
+      <div class="ch-text">
+        <p class="lbl">05 · The downhole array conundrum <span class="soon">manuscript in preparation</span></p>
+        <h2>Part of the gap lives at the bottom of the borehole</h2>
+        <p>A downhole sensor records both the <strong>upgoing</strong> wave and the <strong>downgoing</strong> wave reflected from the surface, about 0.36 s apart at DPDA. The downgoing wave carves a “spectral hole” in the transfer function at the site frequency. In the models that hole is about twice as deep as recorded, which is why model peaks reach ~25–30 versus 5.6 in the data. Removing the downgoing wave brings 1D transfer-function peaks close to the recorded ones at all four arrays.</p>
+        <p>To test whether realistic variability could fill the gap, I ran:</p>
+        <ul class="facts">
+          <li>2D V<sub>s</sub> random fields (σ<sub>lnVs</sub> 0.1 and 0.3; correlation lengths of 12×6 m and 100×10 m), 120 runs plus a 40-run pool</li>
+          <li>3D random fields (15 realizations)</li>
+          <li>Incoherent input motions using random lags and the SVGM coherency model (Abrahamson 2006) at 15°</li>
+          <li>Combined soil and input variability across 30 site-consistent soil models</li>
+        </ul>
+      </div>
+      <div class="kpis">
+        <div class="kpi navy"><b>1.45</b><span>ln-unit gap at the peak: 0.86 from the downhole side, 0.58 from the surface</span></div>
+        <div class="kpi orange"><b>−0.38</b><span>ln units from SVGM incoherence, the largest input effect</span></div>
+        <div class="kpi teal"><b>~1/5</b><span>of the peak gap (and ~1/3 of the hole deficit) closed by combined variability</span></div>
+        <div class="kpi"><b>0</b><span>new scattering mechanisms added by going from 2D to 3D</span></div>
+      </div>
+    </article>
+
+    <article class="chapter" id="takeaways">
+      <div class="ch-text">
+        <p class="lbl">06 · Takeaways &amp; future work</p>
+        <h2>What this means for practice</h2>
+        <ul class="facts">
+          <li>Multi-dimensional site response alone still over-predicts amplification at downhole arrays.</li>
+          <li>In practice, calibrated D<sub>min</sub> multipliers combined with Rayleigh mass-only damping give the best results and run faster.</li>
+          <li>Part of the mismatch comes from the downhole “within” boundary condition itself, not only from the soil model.</li>
+        </ul>
+        <h3>Next steps</h3>
+        <ul class="facts">
+          <li>Extend the multiplier vs. velocity-contrast relationship to more arrays</li>
+          <li>Couple regional wavefield simulations to the local site models</li>
+          <li>Measure in-situ damping that separates intrinsic from apparent damping (as in Aimar et al. 2026)</li>
+          <li>Run nonlinear 2D and 3D analyses for stronger shaking</li>
+        </ul>
+        <p class="muted">H/V data at Treasure Island and Delaney Park were funded by PG&amp;E; I15DA aftershock records were provided by the University of Utah Seismograph Stations.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section tinted">
   <div class="wrap themes">
-  
-  <article class="theme" id="multi-d">
-    <figure><img src="images/fig-inclined-schematic.jpg" alt="2D Vs model at Delaney Park with an inclined wavefront"><figcaption>2D shear-wave velocity cross-section at the Delaney Park downhole array, Anchorage, with an inclined incoming wavefront.</figcaption></figure>
-    <div><h2>Multi-dimensional site response</h2><p>I develop large-scale 2D and 3D numerical site response models at downhole array sites, where earthquakes are recorded both at the surface and at depth. These recordings let us test model predictions directly against what the ground actually did.</p><p>Recent work examines how the inclination and azimuth of incoming waves change the predicted response, and how much 3D subsurface variability matters compared with 1D analyses.</p></div>
-  </article>
-  
-  <article class="theme flip" id="damping">
-    <figure><img src="images/fig-rayleigh.jpg" alt="Rayleigh damping curves"><figcaption>Frequency dependence of full Rayleigh damping and its mass- and stiffness-proportional components.</figcaption></figure>
-    <div><h2>Numerical damping formulations</h2><p>Every numerical site response model needs a way to represent energy loss in soil. Different damping formulations can give noticeably different answers.</p><p>By calibrating 2D models against recorded ground motions, I evaluate which formulations best reproduce small-strain site response, with results published in <em>Earthquake Spectra</em> and at ICSMGE 2026.</p></div>
-  </article>
-  
-  <article class="theme" id="vs-models">
-    <figure><img src="images/fig-four-sites.jpg" alt="3D Vs models at four downhole arrays"><figcaption>3D Vs models at four downhole arrays (Delaney Park, I-15, Treasure Island and Garner Valley), built from distributed HVSR measurements.</figcaption></figure>
-    <div><h2>3D subsurface velocity models</h2><p>Multi-dimensional models are only as good as the subsurface model beneath them. I build large-scale 3D shear-wave velocity models by combining spatially distributed horizontal-to-vertical spectral ratio (HVSR) measurements with geostatistical kriging.</p><p>These models support the 3D analyses at the I-15 array, where we also recorded aftershocks of the 2020 M5.7 Magna, Utah earthquake.</p></div>
-  </article>
-  
+    
   <article class="theme flip" id="field">
     <figure><img src="images/field-nodes.jpg" alt="Nishkarsha with a dense array of nodal seismometers"><figcaption>Getting a dense array of nodal seismometers ready for deployment.</figcaption></figure>
     <div><h2>Geophysical site characterization</h2><p>Field data are at the heart of my work. I develop deep shear-wave velocity profiles (to roughly 1 km) using active- and passive-source surface-wave methods (MASW and MAM), including NQA-1-compliant studies for nuclear power facilities in Washington, Michigan, and Wyoming.</p><p>I also helped run a large subsurface imaging experiment in Newberry, Florida, using about 2 km of DAS cable alongside nodal seismometers, and the resulting datasets are openly available on DesignSafe.</p></div>
   </article>
+  
   </div>
 </section>
 <section class="section defense" id="defense">
