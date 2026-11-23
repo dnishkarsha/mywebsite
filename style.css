@@ -492,3 +492,17 @@ a.plink:hover{transform:translateY(-2px);text-decoration:none;color:var(--ink);b
 .cta .soc .cbadge{width:34px;height:34px;border-radius:9px;font-size:.95rem;margin:0}
 @media (max-width:680px){.cta .socials{margin-bottom:16px}}
 .cta .mail .m-text{font:600 clamp(1.05rem,1.8vw,1.4rem) var(--display);color:#fff}.cta .mail i{font-style:normal;color:#93a3bb}
+.photo-hero .hero-video{max-width:340px}
+.photo-hero .quake{height:70px;margin:4px 0 50px}
+.cta .socials{display:grid;grid-template-columns:repeat(4,150px);gap:14px}
+.cta .soc{flex-direction:column;justify-content:center;gap:12px;padding:18px 10px;height:130px;text-align:center;border-radius:16px}
+.cta .soc .cbadge{width:52px;height:52px;border-radius:13px;font-size:1.35rem}
+@media (max-width:1100px){.cta .socials{grid-template-columns:repeat(4,1fr);width:100%}}
+@media (max-width:680px){.cta .socials{grid-template-columns:1fr 1fr}.cta .soc{height:110px}}
+@media (min-width:681px){
+.cta{display:grid;grid-template-columns:1fr auto;grid-template-areas:"lbl soc" "mail soc" "act soc";align-content:center;column-gap:32px;row-gap:14px}
+.cta .lbl{grid-area:lbl;align-self:end}.cta .mail{grid-area:mail}.cta .hero-actions{grid-area:act;margin:0}.cta .socials{grid-area:soc;align-self:center}
+}
+.cta .soc .b-rg span{font-size:1.35rem}
+@media (max-width:1100px) and (min-width:681px){.cta{grid-template-columns:1fr;grid-template-areas:"lbl" "mail" "soc" "act"}.t.w4.cta{grid-row:span 2}}
+@media (max-width:1100px) and (min-width:901px){.t.w4.cta{grid-row:span 1;grid-template-columns:1fr auto;grid-template-areas:"lbl lbl" "mail act" "soc soc";row-gap:10px}.cta .soc{height:92px;gap:8px;padding:10px}.cta .soc .cbadge{width:40px;height:40px}}
